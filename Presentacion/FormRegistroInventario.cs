@@ -12,8 +12,8 @@ namespace Proyecto1.Presentacion
         {
             InitializeComponent();
             btnGuardar.Click += new EventHandler(btnGuardar_Click);
-            CargarTiendas(); // Cargar tiendas en el ComboBox
-            CargarVideojuegos(); // Cargar videojuegos en el DataGridView
+            CargarTiendas(); // Cargar tiendas en el ComboBox desde el arreglo 
+            CargarVideojuegos(); // Cargar videojuegos en el DataGridView desde el arreglo
         }
 
         private void CargarTiendas()
@@ -105,7 +105,6 @@ namespace Proyecto1.Presentacion
                 {
                     MessageBox.Show("Inventario registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();
-                    MostrarDatosEnMessageBox(); // Mostrar los datos después de guardar
                 }
                 else
                 {
@@ -118,7 +117,7 @@ namespace Proyecto1.Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -146,7 +145,7 @@ namespace Proyecto1.Presentacion
             }
             return false; // No hay espacio en el arreglo
         }
-
+        // Limpiar los campos del formulario después de guardar un registro
         private void LimpiarCampos()
         {
             cmbTienda.SelectedIndex = -1;
@@ -154,24 +153,5 @@ namespace Proyecto1.Presentacion
             txtExistencias.Clear();
         }
 
-        private void MostrarDatosEnMessageBox()
-        {
-            string datos = "Inventario almacenado:\n";
-
-            foreach (var inv in Datos.Inventario)
-            {
-                if (inv != null)
-                {
-                    datos += $"Tienda: {inv.Tienda.Nombre}, Videojuego: {inv.Videojuego.Nombre}, Existencias: {inv.Existencias}\n";
-                }
-            }
-
-            MessageBox.Show(datos, "Datos Almacenados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btnMostrarDatos_Click(object sender, EventArgs e)
-        {
-            MostrarDatosEnMessageBox(); // Mostrar los datos al hacer clic en el botón
-        }
     }
 }

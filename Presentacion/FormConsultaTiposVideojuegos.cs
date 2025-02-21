@@ -1,7 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
 using Proyecto1.AccesoDatos;
-
+/**
+ *UNED Primer Cuatrimestre 2025
+ *Proyecto 1: Gestion de Tiendas de Videojuegos
+ *Estudiante: Jaroth Segura Valverde
+ * Fecha de entrega: 23 de febrero 2025
+ */
 namespace Proyecto1.Presentacion
 {
     public partial class FormConsultaTiposVideojuegos : Form
@@ -13,7 +18,6 @@ namespace Proyecto1.Presentacion
 
         private void FormConsultaTiposVideojuegos_Load(object sender, EventArgs e)
         {
-            // Cargar los datos al abrir el formulario
             CargarDatos();
         }
 
@@ -33,7 +37,6 @@ namespace Proyecto1.Presentacion
             {
                 if (tipoVideojuego != null) // Verificar que el registro no sea nulo
                 {
-                    // Agregar una fila al DataGridView con los datos del tipo de videojuego
                     dgvTiposVideojuegos.Rows.Add(
                         tipoVideojuego.Id,
                         tipoVideojuego.Nombre,

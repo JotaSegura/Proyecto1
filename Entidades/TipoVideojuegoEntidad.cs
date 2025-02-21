@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/**
+ *UNED Primer Cuatrimestre 2025
+ *Proyecto 1: Gestion de Tiendas de Videojuegos
+ *Estudiante: Jaroth Segura Valverde
+ * Fecha de entrega: 23 de febrero 2025
+ */
 namespace Proyecto1.Entidades
 {
+    //Getters y Setters de la clase TipoVideojuegoEntidad
     public class TipoVideojuegoEntidad
     {
         public int Id { get; set; }

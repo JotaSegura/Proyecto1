@@ -2,7 +2,12 @@
 using System.Windows.Forms;
 using Proyecto1.Entidades;
 using Proyecto1.AccesoDatos;
-
+/**
+ *UNED Primer Cuatrimestre 2025
+ *Proyecto 1: Gestion de Tiendas de Videojuegos
+ *Estudiante: Jaroth Segura Valverde
+ * Fecha de entrega: 23 de febrero 2025
+ */
 namespace Proyecto1.Presentacion
 {
     public partial class FormRegistroTiposVideojuegos : Form
@@ -10,7 +15,7 @@ namespace Proyecto1.Presentacion
         public FormRegistroTiposVideojuegos()
         {
             InitializeComponent();
-            btnGuardar.Click += new EventHandler(btnGuardar_Click); // Asegúrate de que el evento esté asociado
+            btnGuardar.Click += new EventHandler(btnGuardar_Click); // Asocia el evento Click del botón Guardar con el método btnGuardar_Click
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -60,7 +65,7 @@ namespace Proyecto1.Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

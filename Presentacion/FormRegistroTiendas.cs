@@ -2,7 +2,12 @@
 using System.Windows.Forms;
 using Proyecto1.Entidades;
 using Proyecto1.AccesoDatos;
-
+/**
+ *UNED Primer Cuatrimestre 2025
+ *Proyecto 1: Gestion de Tiendas de Videojuegos
+ *Estudiante: Jaroth Segura Valverde
+ * Fecha de entrega: 23 de febrero 2025
+ */
 namespace Proyecto1.Presentacion
 {
     public partial class FormRegistroTiendas : Form
@@ -10,10 +15,10 @@ namespace Proyecto1.Presentacion
         public FormRegistroTiendas()
         {
             InitializeComponent();
-            btnGuardar.Click += new EventHandler(btnGuardar_Click);
+            btnGuardar.Click += new EventHandler(btnGuardar_Click);//asociar evento click del boton guardar
             CargarAdministradores(); // Cargar administradores en el ComboBox
         }
-
+        //metodo para cargar los administradores en el combobox
         private void CargarAdministradores()
         {
             cmbAdministrador.Items.Clear();
@@ -75,7 +80,6 @@ namespace Proyecto1.Presentacion
                 {
                     MessageBox.Show("Tienda registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();
-                    MostrarDatosEnMessageBox(); // Mostrar los datos después de guardar
                 }
                 else
                 {
@@ -88,7 +92,7 @@ namespace Proyecto1.Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -127,19 +131,5 @@ namespace Proyecto1.Presentacion
             cmbActiva.SelectedIndex = -1;
         }
 
-        private void MostrarDatosEnMessageBox()
-        {
-            string datos = "Tiendas almacenadas:\n";
-
-            foreach (var tienda in Datos.Tiendas)
-            {
-                if (tienda != null)
-                {
-                    datos += $"ID: {tienda.Id}, Nombre: {tienda.Nombre}, Administrador: {tienda.Administrador.Nombre}, Dirección: {tienda.Direccion}, Teléfono: {tienda.Telefono}, Activa: {tienda.Activa}\n";
-                }
-            }
-
-            MessageBox.Show(datos, "Datos Almacenados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
     }
 }

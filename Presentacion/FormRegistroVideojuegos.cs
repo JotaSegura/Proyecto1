@@ -2,7 +2,12 @@
 using System.Windows.Forms;
 using Proyecto1.Entidades;
 using Proyecto1.AccesoDatos;
-
+/**
+ *UNED Primer Cuatrimestre 2025
+ *Proyecto 1: Gestion de Tiendas de Videojuegos
+ *Estudiante: Jaroth Segura Valverde
+ * Fecha de entrega: 23 de febrero 2025
+ */
 namespace Proyecto1.Presentacion
 {
     public partial class FormRegistroVideojuegos : Form
@@ -14,6 +19,7 @@ namespace Proyecto1.Presentacion
             CargarTiposVideojuegos(); // Cargar tipos de videojuegos en el ComboBox
         }
 
+        //Metodo para cargar los tipos de videojuegos en el ComboBox
         private void CargarTiposVideojuegos()
         {
             cmbTipoVideojuego.Items.Clear();
@@ -25,7 +31,7 @@ namespace Proyecto1.Presentacion
                 }
             }
         }
-
+        //metodo para guardar los videojuegos
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -75,7 +81,6 @@ namespace Proyecto1.Presentacion
                 {
                     MessageBox.Show("Videojuego registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();
-                    MostrarDatosEnMessageBox();
                 }
                 else
                 {
@@ -88,10 +93,10 @@ namespace Proyecto1.Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //metodo para verificar si el id ya existe
         private bool ExisteId(int id)
         {
             foreach (var videojuego in Datos.Videojuegos)
@@ -103,7 +108,7 @@ namespace Proyecto1.Presentacion
             }
             return false;
         }
-
+        //metodo para guardar en el arreglo
         private bool GuardarEnArreglo(VideojuegoEntidad videojuego)
         {
             for (int i = 0; i < Datos.Videojuegos.Length; i++)
@@ -116,7 +121,7 @@ namespace Proyecto1.Presentacion
             }
             return false;
         }
-
+        //metodo para limpiar campos despues de recibir el input del usuario
         private void LimpiarCampos()
         {
             txtId.Clear();
@@ -126,19 +131,6 @@ namespace Proyecto1.Presentacion
             txtLanzamiento.Clear();
             cmbFisico.SelectedIndex = -1;
         }
-        private void MostrarDatosEnMessageBox()
-        {
-            string datos = "Videojuegos almacenados:\n";
 
-            foreach (var videojuego in Datos.Videojuegos)
-            {
-                if (videojuego != null)
-                {
-                    datos += $"ID: {videojuego.Id}, Nombre: {videojuego.Nombre}, Tipo: {videojuego.TipoVideojuego.Nombre}, Desarrollador: {videojuego.Desarrollador}, Lanzamiento: {videojuego.Lanzamiento}, Físico: {videojuego.Fisico}\n";
-                }
-            }
-
-            MessageBox.Show(datos, "Datos Almacenados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
     }
 }

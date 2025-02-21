@@ -2,7 +2,12 @@
 using System.Windows.Forms;
 using Proyecto1.Entidades;
 using Proyecto1.AccesoDatos;
-
+/**
+ *UNED Primer Cuatrimestre 2025
+ *Proyecto 1: Gestion de Tiendas de Videojuegos
+ *Estudiante: Jaroth Segura Valverde
+ * Fecha de entrega: 23 de febrero 2025
+ */
 namespace Proyecto1.Presentacion
 {
     public partial class FormRegistroClientes : Form
@@ -10,7 +15,7 @@ namespace Proyecto1.Presentacion
         public FormRegistroClientes()
         {
             InitializeComponent();
-            btnGuardar.Click += new EventHandler(btnGuardar_Click);
+            btnGuardar.Click += new EventHandler(btnGuardar_Click);//Asociar el evento click al boton guardar
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -50,7 +55,6 @@ namespace Proyecto1.Presentacion
                 {
                     MessageBox.Show("Cliente registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();
-                    MostrarDatosEnMessageBox(); // Mostrar los datos después de guardar
                 }
                 else
                 {
@@ -63,7 +67,7 @@ namespace Proyecto1.Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -91,7 +95,7 @@ namespace Proyecto1.Presentacion
             }
             return false; // No hay espacio en el arreglo
         }
-
+        //Limpiar campos despues de crear un registro
         private void LimpiarCampos()
         {
             txtIdentificacion.Clear();
@@ -101,26 +105,5 @@ namespace Proyecto1.Presentacion
             dtpFechaNacimiento.Value = DateTime.Now;
             cmbJugadorEnLinea.SelectedIndex = -1;
         }
-
-        private void MostrarDatosEnMessageBox()
-        {
-            string datos = "Clientes almacenados:\n";
-
-            foreach (var cliente in Datos.Clientes)
-            {
-                if (cliente != null)
-                {
-                    datos += $"ID: {cliente.Identificacion}, Nombre: {cliente.Nombre} {cliente.PrimerApellido} {cliente.SegundoApellido}, Fecha Nacimiento: {cliente.FechaNacimiento.ToShortDateString()}, Jugador en Línea: {(cliente.JugadorEnLinea ? "Sí" : "No")}\n";
-                }
-            }
-
-            MessageBox.Show(datos, "Datos Almacenados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btnMostrarDatos_Click(object sender, EventArgs e)
-        {
-            MostrarDatosEnMessageBox(); // Mostrar los datos al hacer clic en el botón
-        }
-
     }
 }

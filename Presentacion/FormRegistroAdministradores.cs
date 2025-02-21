@@ -2,7 +2,12 @@
 using System.Windows.Forms;
 using Proyecto1.Entidades;
 using Proyecto1.AccesoDatos;
-
+/**
+ *UNED Primer Cuatrimestre 2025
+ *Proyecto 1: Gestion de Tiendas de Videojuegos
+ *Estudiante: Jaroth Segura Valverde
+ * Fecha de entrega: 23 de febrero 2025
+ */
 namespace Proyecto1.Presentacion
 {
     public partial class FormRegistroAdministradores : Form
@@ -64,7 +69,6 @@ namespace Proyecto1.Presentacion
                 {
                     MessageBox.Show("Administrador registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();
-                    MostrarDatosEnMessageBox();
                 }
                 else
                 {
@@ -77,7 +81,7 @@ namespace Proyecto1.Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -105,7 +109,7 @@ namespace Proyecto1.Presentacion
             }
             return false;
         }
-
+        //Limpiar campos despues de crear un nuevo registro
         private void LimpiarCampos()
         {
             txtIdentificacion.Clear();
@@ -115,22 +119,5 @@ namespace Proyecto1.Presentacion
             dtpFechaNacimiento.Value = DateTime.Now;
             dtpFechaContratacion.Value = DateTime.Now;
         }
-
-        private void MostrarDatosEnMessageBox()
-        {
-            string datos = "Administradores almacenados:\n";
-
-            foreach (var admin in Datos.Administradores)
-            {
-                if (admin != null)
-                {
-                    datos += $"ID: {admin.Identificacion}, Nombre: {admin.Nombre} {admin.PrimerApellido} {admin.SegundoApellido}, Fecha Nacimiento: {admin.FechaNacimiento.ToShortDateString()}, Fecha Contratación: {admin.FechaContratacion.ToShortDateString()}\n";
-                }
-            }
-
-            MessageBox.Show(datos, "Datos Almacenados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-
     }
 }
