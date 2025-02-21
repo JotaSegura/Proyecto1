@@ -130,5 +130,7 @@ namespace Proyecto1.Presentacion
 
             MessageBox.Show(datos, "Datos Almacenados", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+
     }
 }

@@ -34,14 +34,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvVideojuegos = new System.Windows.Forms.DataGridView();
-            this.txtExistencias = new System.Windows.Forms.TextBox();
-            this.cmbTienda = new System.Windows.Forms.ComboBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Desarrollador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lanzamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtExistencias = new System.Windows.Forms.TextBox();
+            this.cmbTienda = new System.Windows.Forms.ComboBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVideojuegos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +49,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(234, 45);
+            this.label1.Location = new System.Drawing.Point(245, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(298, 32);
             this.label1.TabIndex = 0;
@@ -107,31 +107,6 @@
             this.dgvVideojuegos.Size = new System.Drawing.Size(536, 150);
             this.dgvVideojuegos.TabIndex = 5;
             // 
-            // txtExistencias
-            // 
-            this.txtExistencias.Location = new System.Drawing.Point(852, 175);
-            this.txtExistencias.Name = "txtExistencias";
-            this.txtExistencias.Size = new System.Drawing.Size(100, 20);
-            this.txtExistencias.TabIndex = 6;
-            // 
-            // cmbTienda
-            // 
-            this.cmbTienda.FormattingEnabled = true;
-            this.cmbTienda.Location = new System.Drawing.Point(39, 174);
-            this.cmbTienda.Name = "cmbTienda";
-            this.cmbTienda.Size = new System.Drawing.Size(121, 21);
-            this.cmbTienda.TabIndex = 8;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(13, 415);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 9;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
             // Id
             // 
             this.Id.HeaderText = "Id";
@@ -161,6 +136,31 @@
             this.Lanzamiento.HeaderText = "Lanzamiento";
             this.Lanzamiento.Name = "Lanzamiento";
             this.Lanzamiento.ReadOnly = true;
+            // 
+            // txtExistencias
+            // 
+            this.txtExistencias.Location = new System.Drawing.Point(852, 175);
+            this.txtExistencias.Name = "txtExistencias";
+            this.txtExistencias.Size = new System.Drawing.Size(100, 20);
+            this.txtExistencias.TabIndex = 6;
+            // 
+            // cmbTienda
+            // 
+            this.cmbTienda.FormattingEnabled = true;
+            this.cmbTienda.Location = new System.Drawing.Point(39, 174);
+            this.cmbTienda.Name = "cmbTienda";
+            this.cmbTienda.Size = new System.Drawing.Size(121, 21);
+            this.cmbTienda.TabIndex = 8;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(13, 415);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 9;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // FormRegistroInventario
             // 

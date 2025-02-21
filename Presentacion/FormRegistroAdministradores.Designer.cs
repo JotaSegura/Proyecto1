@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(245, 51);
+            this.label1.Location = new System.Drawing.Point(245, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(379, 32);
             this.label1.TabIndex = 0;
@@ -62,7 +62,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 21);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Identificacion";
+            this.label2.Text = "Identificación";
             // 
             // label3
             // 
@@ -80,9 +80,9 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(247, 134);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 21);
+            this.label4.Size = new System.Drawing.Size(125, 21);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Primir Apellido";
+            this.label4.Text = "Primer Apellido";
             // 
             // label5
             // 
@@ -112,7 +112,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(195, 21);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Fecha de Contratacion";
+            this.label7.Text = "Fecha de Contratación";
             // 
             // dtpFechaContratacion
             // 

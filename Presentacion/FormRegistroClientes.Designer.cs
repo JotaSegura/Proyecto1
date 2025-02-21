@@ -52,7 +52,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 21);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Identificacion";
+            this.label1.Text = "Identificación";
             // 
             // label2
             // 
@@ -68,7 +68,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(245, 109);
+            this.label3.Location = new System.Drawing.Point(266, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 21);
             this.label3.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(365, 109);
+            this.label4.Location = new System.Drawing.Point(409, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 21);
             this.label4.TabIndex = 3;
@@ -88,7 +88,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(509, 109);
+            this.label5.Location = new System.Drawing.Point(563, 108);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(179, 21);
             this.label5.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(737, 109);
+            this.label6.Location = new System.Drawing.Point(818, 108);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(145, 21);
             this.label6.TabIndex = 5;
@@ -107,10 +107,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(193, 51);
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(245, 50);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(295, 36);
+            this.label8.Size = new System.Drawing.Size(271, 32);
             this.label8.TabIndex = 7;
             this.label8.Text = "Registro de Clientes";
             // 
@@ -125,28 +125,28 @@
             // 
             // txtIdentificacion
             // 
-            this.txtIdentificacion.Location = new System.Drawing.Point(15, 136);
+            this.txtIdentificacion.Location = new System.Drawing.Point(13, 130);
             this.txtIdentificacion.Name = "txtIdentificacion";
             this.txtIdentificacion.Size = new System.Drawing.Size(100, 20);
             this.txtIdentificacion.TabIndex = 9;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(140, 136);
+            this.txtNombre.Location = new System.Drawing.Point(140, 132);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 10;
             // 
             // txtPrimerApellido
             // 
-            this.txtPrimerApellido.Location = new System.Drawing.Point(249, 136);
+            this.txtPrimerApellido.Location = new System.Drawing.Point(270, 133);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
             this.txtPrimerApellido.Size = new System.Drawing.Size(100, 20);
             this.txtPrimerApellido.TabIndex = 11;
             // 
             // txtSegundoApellido
             // 
-            this.txtSegundoApellido.Location = new System.Drawing.Point(369, 134);
+            this.txtSegundoApellido.Location = new System.Drawing.Point(413, 133);
             this.txtSegundoApellido.Name = "txtSegundoApellido";
             this.txtSegundoApellido.Size = new System.Drawing.Size(100, 20);
             this.txtSegundoApellido.TabIndex = 12;
@@ -157,14 +157,14 @@
             this.cmbJugadorEnLinea.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.cmbJugadorEnLinea.Location = new System.Drawing.Point(741, 133);
+            this.cmbJugadorEnLinea.Location = new System.Drawing.Point(822, 129);
             this.cmbJugadorEnLinea.Name = "cmbJugadorEnLinea";
             this.cmbJugadorEnLinea.Size = new System.Drawing.Size(121, 21);
             this.cmbJugadorEnLinea.TabIndex = 13;
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(513, 133);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(567, 130);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaNacimiento.TabIndex = 14;
@@ -174,7 +174,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(894, 450);
+            this.ClientSize = new System.Drawing.Size(983, 450);
             this.Controls.Add(this.dtpFechaNacimiento);
             this.Controls.Add(this.cmbJugadorEnLinea);
             this.Controls.Add(this.txtSegundoApellido);

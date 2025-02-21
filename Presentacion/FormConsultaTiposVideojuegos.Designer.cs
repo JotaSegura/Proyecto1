@@ -87,7 +87,7 @@
             // 
             // Descripcion
             // 
-            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.DataPropertyName = "Descripción";
             this.Descripcion.HeaderText = "Descripcion";
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;

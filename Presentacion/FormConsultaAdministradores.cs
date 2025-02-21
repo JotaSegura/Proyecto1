@@ -1,20 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto1.AccesoDatos;
 
 namespace Proyecto1.Presentacion
 {
-    public partial class FormConsultaAdministradores: Form
+    public partial class FormConsultaAdministradores : Form
     {
         public FormConsultaAdministradores()
         {
             InitializeComponent();
+            CargarDatos();
+        }
+
+        private void CargarDatos()
+        {
+            dgvAdministradores.Rows.Clear();
+
+            foreach (var admin in Datos.Administradores)
+            {
+                if (admin != null)
+                {
+                    dgvAdministradores.Rows.Add(
+                        admin.Identificacion,
+                        admin.Nombre,
+                        admin.PrimerApellido,
+                        admin.SegundoApellido,
+                        admin.FechaNacimiento.ToShortDateString(),
+                        admin.FechaContratacion.ToShortDateString()
+                    );
+                }
+            }
         }
     }
 }

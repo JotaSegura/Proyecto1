@@ -29,10 +29,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(250, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 36);
+            this.label1.Size = new System.Drawing.Size(206, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Menu Principal";
             // 
@@ -148,6 +148,7 @@
             // 
             // btnConsultarInventario
             // 
+            this.btnConsultarInventario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConsultarInventario.Location = new System.Drawing.Point(280, 210);
             this.btnConsultarInventario.Name = "btnConsultarInventario";
             this.btnConsultarInventario.Size = new System.Drawing.Size(180, 25);

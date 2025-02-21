@@ -133,8 +133,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\FormConsultaAdministradores.resx">
+      <DependentUpon>FormConsultaAdministradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FormConsultaClientes.resx">
+      <DependentUpon>FormConsultaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FormConsultaInventario.resx">
+      <DependentUpon>FormConsultaInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FormConsultaTiendas.resx">
+      <DependentUpon>FormConsultaTiendas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FormConsultaTiposVideojuegos.resx">
       <DependentUpon>FormConsultaTiposVideojuegos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FormConsultaVideojuegos.resx">
+      <DependentUpon>FormConsultaVideojuegos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FormMenuPrincipal.resx">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>

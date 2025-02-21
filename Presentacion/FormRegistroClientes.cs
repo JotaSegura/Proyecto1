@@ -121,5 +121,6 @@ namespace Proyecto1.Presentacion
         {
             MostrarDatosEnMessageBox(); // Mostrar los datos al hacer clic en el botón
         }
+
     }
 }
